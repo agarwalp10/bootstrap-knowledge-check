@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container py-5">
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand ms-3" href="#">Knowledge Check</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Registration Form with validation-->
+    <h1 class="my-3 text-center">Registration Form</h1>
+
+    <form class="needs-validation" novalidate>
+        <!-- First and Last name right next to each other -->
+        <div class="row mb-3">
+            <!-- First Name -->
+            <div class="col-md-6">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstName" required>
+            </div>
+            <!-- Last Name -->
+            <div class="col-md-6">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastName" required>
+            </div>
+        </div>
+
+        <!-- Email with Validation -->
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control is-invalid" id="email" required>
+            <div class="invalid-feedback">
+                Please enter a valid email.
+            </div>
+        </div>
+
+        <!-- Password with Validation-->
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" required>
+            <div class="invalid-feedback">
+                Password is required.
+            </div>
+        </div>
+
+        <!-- Check box -->
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="terms" required>
+            <label class="form-check-label" for="terms">
+                I agree to the terms and conditions
+            </label>
+        </div>
+
+        <!-- Submit Button - two buttons, one hides for a small screen -->
+        <button type="submit" class="btn btn-success btn-lg">Register</button>
+        <button type="submit" class="btn btn-primary btn-sm d-none d-md-block">Register</button>
+    </form>
+
+    <!-- Table for displaying Data - pre-populated -->
+    <h2>Previous Submissions</h2>
+    <div class="table-responsive">
+        <!-- Table has hover feature and every other row is striped -->
+        <table class="table table-striped table-hover table-bordered align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Source</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>John Doe</td>
+                    <td>john@example.com</td>
+                    <td>Interested in learning more about your services!</td>
+                    <td>Search Engine</td>
+                    <td>Business Inquiry</td>
+                    <td><span class="badge bg-success">Active</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jane Smith</td>
+                    <td>jane@example.com</td>
+                    <td>Looking for help with my account.</td>
+                    <td>Social Media</td>
+                    <td>Support</td>
+                    <td><span class="badge bg-danger">Inactive</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>ROb Johnson</td>
+                    <td>rjohn@example.com</td>
+                    <td>I can't login to my account, need some assistance.</td>
+                    <td>Website</td>
+                    <td>Support</td>
+                    <td><span class="badge bg-success">Active</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Mike Reed</td>
+                    <td>mreed@example.com</td>
+                    <td>My computer is not turning on</td>
+                    <td>Laptop</td>
+                    <td>Support</td>
+                    <td><span class="badge bg-danger">Inactive</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Responsive Image  -->
+    <div class="container-fluid">
+        <img src="images/pexels-photo-1285625.jpeg" class="img-fluid" alt="Responsive image">
+    </div>
+    <!-- Added a rounded image -->
+    <div class="container-fluid mt-3">
+        <img src="images/eiffel-photo-3305370.jpeg" class="img-fluid rounded-circle" alt="Responsive image">
+    </div>
+
+</body>
+</html>
